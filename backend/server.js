@@ -31,11 +31,11 @@ db.query('SELECT NOW()', (err, res) => {
   }
 });
 
-// Routes
+// API Routes
 app.use('/api/analytics', analyticsRoutes);
 
 // Health check endpoint
-app.get('/health', (req, res) => {
+app.get('/api/health', (req, res) => {
   res.json({ 
     status: 'OK', 
     message: 'Shopify Analytics Backend is running',
@@ -60,5 +60,5 @@ app.use('*', (req, res) => {
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
   console.log(`📊 Analytics API available at http://localhost:${PORT}/api/analytics`);
-  console.log(`🏥 Health check at http://localhost:${PORT}/health`);
+  console.log(`🏥 Health check at http://localhost:${PORT}/api/health`);
 });

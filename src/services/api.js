@@ -1,4 +1,4 @@
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://shopify-eqge.onrender.com';
 
 class ApiService {
   constructor() {
@@ -31,57 +31,57 @@ class ApiService {
 
   // Get all dashboard data
   async getDashboardData() {
-    return this.request('/analytics/dashboard');
+    return this.request('/api/analytics/dashboard');
   }
 
   // Get sessions by device
   async getSessionsByDevice() {
-    return this.request('/analytics/sessions-by-device');
+    return this.request('/api/analytics/sessions-by-device');
   }
 
   // Get customers over time
   async getCustomersOverTime() {
-    return this.request('/analytics/customers-over-time');
+    return this.request('/api/analytics/customers-over-time');
   }
 
   // Get total sales
   async getTotalSales() {
-    return this.request('/analytics/total-sales');
+    return this.request('/api/analytics/total-sales');
   }
 
   // Get gross sales by country
   async getGrossSalesByCountry() {
-    return this.request('/analytics/gross-sales-by-country');
+    return this.request('/api/analytics/gross-sales-by-country');
   }
 
   // Get sales by product
   async getSalesByProduct() {
-    return this.request('/analytics/sales-by-product');
+    return this.request('/api/analytics/sales-by-product');
   }
 
   // Get gross sales by device
   async getGrossSalesByDevice() {
-    return this.request('/analytics/gross-sales-by-device');
+    return this.request('/api/analytics/gross-sales-by-device');
   }
 
   // Get sessions by country
   async getSessionsByCountry() {
-    return this.request('/analytics/sessions-by-country');
+    return this.request('/api/analytics/sessions-by-country');
   }
 
   // Get customer satisfaction
   async getCustomerSatisfaction() {
-    return this.request('/analytics/customer-satisfaction');
+    return this.request('/api/analytics/customer-satisfaction');
   }
 
   // Get conversion rate
   async getConversionRate() {
-    return this.request('/analytics/conversion-rate');
+    return this.request('/api/analytics/conversion-rate');
   }
 
   // Health check
   async healthCheck() {
-    return this.request('/health');
+    return this.request('/api/health');
   }
 }
 
